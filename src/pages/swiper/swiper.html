@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-navbar color='primary'>
+    <ion-title>swiper</ion-title>
+  </ion-navbar>
+  <div class="pageMenuSlides">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide {{i==0?'bottomLine':''}}" *ngFor="let item of menus;let i=index;" tappable (click)="selectPageMenu(i)">{{item}}</div>
+      </div>
+    </div>
+  </div>
+</ion-header>
+<ion-slides #contentSlides (ionSlideDidChange)="slideChanged()">
+  <ion-slide>
+    111111111111111111
+  </ion-slide>
+  <ion-slide>
+    2222222222222
+  </ion-slide>
+  <ion-slide>
+    3333333333333
+  </ion-slide>
+  <ion-slide>
+    44444444444444444
+  </ion-slide>
+</ion-slides>

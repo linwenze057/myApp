@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-navbar style="opacity: 0.5" no-border-bottom color="primary">
+    <ion-title>
+      个人中心
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content fullscreen>
+  <ion-list>
+    <button ion-item (click)="imgChoice()">
+        选择图片
+    </button>
+    <button ion-item *ngFor="let item of items" (click)="itemClick(item)">
+      {{item.title}}
+    </button>
+    <button ion-item (click)="citySelect()">
+      城市选择<span style="float:right;color: #bdbdbd;">{{currentCity.name}}</span>
+    </button>
+    <button ion-item (click)="swiper()">
+      swiper
+    </button>
+  </ion-list>
+</ion-content>
